@@ -20,7 +20,7 @@ const Home: FC<Props> = ({ data, setData, setEdit }) => {
         {data?.map((item: any, index: number) => (
           <div
             key={item?.id}
-            className=" relative flex flex-col justify-evenly text-center p-2 border w-[200px] h-[150px] rounded"
+            className="relative flex flex-col justify-evenly text-center p-2 border w-[200px] h-[150px] bg-gray-100 rounded"
           >
             <h3 className="text-[20px] font-semibold line-clamp-1 mt-1 w-full mx-auto">
               {item?.title}
@@ -32,13 +32,13 @@ const Home: FC<Props> = ({ data, setData, setEdit }) => {
             <div className="flex gap-1">
               <button
                 onClick={() => handleUpdate(item)}
-                className="w-full bg-green-600 h-[30px] text-white cursor-pointer rounded"
+                className="w-full bg-green-600 h-[30px] text-white cursor-pointer rounded hover:bg-green-700 duration-300"
               >
                 Update
               </button>
               <button
                 onClick={() => handleDelete(item?.id)}
-                className="w-full bg-red-600 h-[30px] text-white cursor-pointer rounded"
+                className="w-full bg-red-600 h-[30px] text-white cursor-pointer rounded hover:bg-red-700 duration-300"
               >
                 Delete
               </button>
